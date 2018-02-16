@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc `pkg-config --cflags gtk+-3.0`  -DSQLITE_HAS_CODEC  main.c export/export.c auth/sqlauth.c requests/curlwrapper.c logs/logs.c  requests/requests.c requests/ssh.c interface/interface.c interface/console.c interface/callbacks.c attack/attack.c check/check.c threads/threads.c passwords/brute.c passwords/file.c -o projetc `pkg-config --libs gtk+-3.0` -I /usr/local/include/sqlcipher -L /usr/local/lib/libsqlcipher.a -lm -l pthread -l sqlcipher -l curl -l ssh -l ssh_threads
